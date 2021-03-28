@@ -1,21 +1,16 @@
 # Use NodeJS base image
 FROM node:13
 
-# Create app directory
-WORKDIR /usr/src/app
+COPY . /www/app
 
-# Install app dependencies by copying
-# package.json and package-lock.json
-COPY package*.json ./
+RUN npm install -g cordova ionic
+RUN npm install -g bower
+RUN npm install -g gulp
 
-# Install dependencies
+WORKDIR /www/app
 RUN npm install
 
-# Copy app source
-COPY . .
+EXPOSE 8100
 
-# Bind the port that the image will run on
-EXPOSE 8080
-
-# Define the Docker image's behavior at runtime
-CMD bash -c "ionic build && ionic serve"
+ENTRYPOINT ["ionic"]
+CMD ["serve", "8100", "--address", "0.0.0.0"]
