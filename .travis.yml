@@ -23,7 +23,7 @@ script:
   - docker build -t udagram-feeds .
   - docker tag udagram-feeds $DOCKER_USERNAME/udagram-feeds:latest
   - cd ..
-  - cd ms-udagram-api-frontend
+  - cd ms-udagram-frontend
   - docker build -t udagram-frontend .
   - docker tag udagram-frontend $DOCKER_USERNAME/udagram-frontend:latest
 
@@ -36,5 +36,5 @@ after_success:
   - cd ms-udagram-api-feeds
   - docker push $DOCKER_USERNAME/udagram-feeds
   - cd ..
-  - cd ms-udagram-api-frontend
+  - cd ms-udagram-frontend
   - docker push $DOCKER_USERNAME/udagram-frontend 
