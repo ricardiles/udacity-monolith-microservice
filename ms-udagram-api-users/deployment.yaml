@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-user
+  name: udagram-user-app
   labels:
-    app: udagram-user
+    app: udagram-user-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: udagram-user
+      app: udagram-user-app
   template:
     metadata:
       labels:
-        app: udagram-user
+        app: udagram-user-app
     spec:
       containers:
       - name: udagram-user
@@ -35,8 +35,8 @@ spec:
         - name: JWT_SECRET
           value: "helloudacity"
         - name: URL
-          value: "http://udagram-user:8080"
+          value: "http://localhost"
         - name: PORT
           value: "8080"
         ports:
-        - containerPort: 80
+        - containerPort: 8080
