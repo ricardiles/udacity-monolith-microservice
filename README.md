@@ -49,4 +49,5 @@ In screenshots folder you can find the evidence:
 
 ## Another considerations
 
-set_env.sh was eliminated from the repository for security reasons.
+* Exists a .travis.yml file in the root only to get a preview of the .travis.yml file in every microservice. 
+* set_env.sh was eliminated from the repository for security reasons.
