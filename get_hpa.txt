@@ -1,0 +1,4 @@
+NAME                   REFERENCE                         TARGETS   MINPODS   MAXPODS   REPLICAS   AGE
+udagram-feeds-app      Deployment/udagram-feeds-app      0%/50%    1         3         1          38m
+udagram-frontend-app   Deployment/udagram-frontend-app   0%/50%    1         3         1          5m31s
+udagram-user-app       Deployment/udagram-user-app       0%/50%    1         3         1          45m

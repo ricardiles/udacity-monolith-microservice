@@ -39,12 +39,43 @@ In screenshots folder you can find the evidence:
 * kubectl get pods
 * kubectl logs feed
 * kubectl logs users
-* kugectl reverse proxy describe
+* kubectl service feeds
+* kubectl service frontend
+* kubectl service reverse proxy
+* kubectl service users
 * travis ci deploy
 * travis repositories
 * travis success 1
 * travis success 2
 * travis webhook
+
+## Outputs
+
+In addition to the screenshots I put some txt files with output of the commands:
+
+describe_service.txt
+```
+kubectl describe service
+```
+
+get_hpa.txt
+```
+kubectl get hpa
+```
+
+get_pods.txt
+```
+kubectl get pods
+```
+
+logs_feeds.txt
+```
+kubectl logs udagram-feeds-app-5cf7bc98f7-tr5qj
+```
+logs_user.txt
+```
+kubectl logs udagram-user-app-d7b4b946c-7bvf2
+```
 
 
 ## Another considerations

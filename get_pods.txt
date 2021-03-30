@@ -1,0 +1,5 @@
+NAME                                    READY   STATUS    RESTARTS   AGE
+reverseproxy-779cdc7955-vjq4d           1/1     Running   0          20m
+udagram-feeds-app-5cf7bc98f7-tr5qj      1/1     Running   0          38m
+udagram-frontend-app-6bbb9bc477-9nsg7   1/1     Running   0          53m
+udagram-user-app-d7b4b946c-7bvf2        1/1     Running   0          37m

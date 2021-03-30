@@ -1,19 +1,16 @@
-# Use NodeJS base image
-FROM node:13
-
-ARG MAX_OLD_SPACE_SIZE=4096
-ENV NODE_OPTIONS=--max-old-space-size=${MAX_OLD_SPACE_SIZE}
-
-COPY . /www/app
-
-RUN npm install -g cordova ionic
-RUN npm install -g bower
-RUN npm install -g gulp
-
-WORKDIR /www/app
-RUN npm install
+## Build
+FROM beevelop/ionic AS ionic
+# Create the application directory
+WORKDIR /usr/src/app
+# Install the application dependencies
+# We can use wildcard to ensure both package.json AND package-lock.json are considered
+# where available (npm@5+)
+COPY package*.json ./
+RUN npm ci
+# Bundle app source
+COPY . .
 RUN ionic build
-
-EXPOSE 8100
-
-CMD bash -c "ionic serve 8100 --adress 0.0.0.0"
+## Run 
+FROM nginx:alpine
+#COPY www /usr/share/nginx/html
+COPY --from=ionic /usr/src/app/www /usr/share/nginx/html

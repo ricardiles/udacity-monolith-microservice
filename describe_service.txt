@@ -1,0 +1,158 @@
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP:                10.100.0.1
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         192.168.106.10:443,192.168.141.211:443
+Session Affinity:  None
+Events:            <none>
+
+
+Name:                     reverseproxy-svc
+Namespace:                default
+Labels:                   service=reverseproxy
+Annotations:              <none>
+Selector:                 app=reverseproxy
+Type:                     LoadBalancer
+IP:                       10.100.42.83
+LoadBalancer Ingress:     a574601d828a64664afe7f4805c3d98b-698787260.us-west-2.elb.amazonaws.com
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  30282/TCP
+Endpoints:                192.168.144.14:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:              udagram-feeds-app
+Namespace:         default
+Labels:            app=udagram-feeds-app
+Annotations:       <none>
+Selector:          app=udagram-feeds-app
+Type:              ClusterIP
+IP:                10.100.191.104
+Port:              <unset>  8081/TCP
+TargetPort:        8081/TCP
+Endpoints:         192.168.121.254:8081,192.168.74.251:8081
+Session Affinity:  None
+Events:            <none>
+
+
+Name:                     udagram-frontend-service
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=udagram-frontend
+Type:                     LoadBalancer
+IP:                       10.100.215.232
+LoadBalancer Ingress:     a0e7f96b1a8204705aebaa0c80e3dace-500389120.us-west-2.elb.amazonaws.com
+Port:                     <unset>  4200/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  31290/TCP
+Endpoints:                192.168.96.207:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason                Age    From                Message
+  ----    ------                ----   ----                -------
+  Normal  EnsuringLoadBalancer  9m45s  service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   9m43s  service-controller  Ensured load balancer
+
+
+Name:              udagram-user-app
+Namespace:         default
+Labels:            app=udagram-user-app
+Annotations:       <none>
+Selector:          app=udagram-user-app
+Type:              ClusterIP
+IP:                10.100.130.51
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         192.168.152.160:8080,192.168.176.187:8080
+Session Affinity:  None
+Events:            <none>
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP:                10.100.0.1
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         192.168.106.10:443,192.168.141.211:443
+Session Affinity:  None
+Events:            <none>
+
+
+Name:                     reverseproxy-svc
+Namespace:                default
+Labels:                   service=reverseproxy
+Annotations:              <none>
+Selector:                 app=reverseproxy
+Type:                     LoadBalancer
+IP:                       10.100.42.83
+LoadBalancer Ingress:     a574601d828a64664afe7f4805c3d98b-698787260.us-west-2.elb.amazonaws.com
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  30282/TCP
+Endpoints:                192.168.132.203:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:              udagram-feeds-app
+Namespace:         default
+Labels:            app=udagram-feeds-app
+Annotations:       <none>
+Selector:          app=udagram-feeds-app
+Type:              ClusterIP
+IP:                10.100.191.104
+Port:              <unset>  8081/TCP
+TargetPort:        8081/TCP
+Endpoints:         192.168.121.254:8081
+Session Affinity:  None
+Events:            <none>
+
+
+Name:                     udagram-frontend-service
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=udagram-frontend
+Type:                     LoadBalancer
+IP:                       10.100.40.228
+LoadBalancer Ingress:     a837364d12ec849cebeb60deac693df3-1142491214.us-west-2.elb.amazonaws.com
+Port:                     <unset>  4200/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  32199/TCP
+Endpoints:                192.168.176.187:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason                Age   From                Message
+  ----    ------                ----  ----                -------
+  Normal  EnsuringLoadBalancer  40m   service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   40m   service-controller  Ensured load balancer
+
+
+Name:              udagram-user-app
+Namespace:         default
+Labels:            app=udagram-user-app
+Annotations:       <none>
+Selector:          app=udagram-user-app
+Type:              ClusterIP
+IP:                10.100.130.51
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         192.168.152.160:8080
+Session Affinity:  None
+Events:            <none>

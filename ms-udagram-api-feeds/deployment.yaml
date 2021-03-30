@@ -35,8 +35,15 @@ spec:
         - name: JWT_SECRET
           value: "helloudacity"
         - name: URL
-          value: "http://localhost:8100"
+          value: "http://a837364d12ec849cebeb60deac693df3-1142491214.us-west-2.elb.amazonaws.com:4200/"
         - name: PORT
           value: "8081"
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m" 
         ports:
         - containerPort: 8081
