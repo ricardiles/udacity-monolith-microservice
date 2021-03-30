@@ -28,3 +28,25 @@ So you can test the postman collection replacing host -> http://a574601d828a6466
 
 * http://a574601d828a64664afe7f4805c3d98b-698787260.us-west-2.elb.amazonaws.com:8080/api/v0/users
 * http://a574601d828a64664afe7f4805c3d98b-698787260.us-west-2.elb.amazonaws.com:8080/api/v0/feed
+
+
+## Screenshots
+
+In screenshots folder you can find the evidence:
+
+* docker hub
+* kubectl get hpa
+* kubectl get pods
+* kubectl logs feed
+* kubectl logs users
+* kugectl reverse proxy describe
+* travis ci deploy
+* travis repositories
+* travis success 1
+* travis success 2
+* travis webhook
+
+
+## Another considerations
+
+set_env.sh was eliminated from the repository for security reasons.
