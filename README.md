@@ -12,13 +12,19 @@ I thought is was a great idea separate every microservice in his respectively re
 
 Anyway I put every microservice in a folder in this repository for your evaluation.  
 
-* [ms-reverse-proxy](https://) 
+* [ms-reverse-proxy](https://github.com/ricardiles/ms-udacity-reverse-proxy) 
 * [ms-udagram-api-feeds](https://github.com/ricardiles/ms-udacity-api-feeds)
-* [ms-udagram-api-users](https://)
-* [ms-udagram-frontend](https://)
+* [ms-udagram-api-users](https://github.com/ricardiles/ms-udacity-api-users)
+* [ms-udagram-frontend](https://github.com/ricardiles/ms-udacity-frontend)
 
-
-The principal task is transform services in the backend
 
 In the readme of the [screenshots](ht) you can find more information about what has been done and evidence of the deployment in addition to the tests carried out.
 
+## URL
+The proxy was exposed so that it can be tested directly in the following url:  
+http://a574601d828a64664afe7f4805c3d98b-698787260.us-west-2.elb.amazonaws.com:8080/api/v0/
+
+So you can test the postman collection replacing host -> http://a574601d828a64664afe7f4805c3d98b-698787260.us-west-2.elb.amazonaws.com:8080/api/v0/
+
+* http://a574601d828a64664afe7f4805c3d98b-698787260.us-west-2.elb.amazonaws.com:8080/api/v0/users
+* http://a574601d828a64664afe7f4805c3d98b-698787260.us-west-2.elb.amazonaws.com:8080/api/v0/feed

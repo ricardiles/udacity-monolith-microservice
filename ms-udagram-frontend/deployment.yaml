@@ -17,26 +17,7 @@ spec:
       containers:
       - name: udagram-frontend
         image: ricardiles/udagram-frontend
-        env:
-        - name: POSTGRES_USERNAME
-          value: "rardiles"
-        - name: POSTGRES_PASSWORD
-          value: "udacity123.."
-        - name: POSTGRES_HOST
-          value: "udacity-dev.c4k86qizidvt.us-west-2.rds.amazonaws.com"
-        - name: POSTGRES_DB
-          value: "postgres"
-        - name: AWS_BUCKET
-          value: "udacity-229318163752-dev"
-        - name: AWS_REGION
-          value: "us-west-2"
-        - name: AWS_PROFILE
-          value: "default"
-        - name: JWT_SECRET
-          value: "helloudacity"
-        - name: URL
-          value: "http://localhost"
-        - name: PORT
-          value: "8100"
+        command: ["/bin/sh"]
+        args: ["-c", "ionic serve --port 8100 --host 0.0.0.0"]
         ports:
         - containerPort: 8100
